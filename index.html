@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroFold Factory | Lennukitehas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Animated background canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <header id="header">
+        <div class="container">
+            <a href="#hero" class="logo">
+                <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
+                    <path d="M2 30 L16 2 L30 16 L2 30Z" fill="url(#logoGrad)"/>
+                    <path d="M16 2 L20 20 L16 30 L12 20Z" fill="rgba(255,255,255,0.15)"/>
+                    <defs>
+                        <linearGradient id="logoGrad" x1="2" y1="30" x2="30" y2="2" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#00d4ff"/>
+                            <stop offset="1" stop-color="#7c3aed"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                Aero<span>Fold</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Avaleht</a></li>
+                    <li><a href="#specs">Tehnilised andmed</a></li>
+                    <li><a href="#about">Meie lugu</a></li>
+                    <li><a href="#footer">Kontakt</a></li>
+                </ul>
+            </nav>
+            <a href="#specs" class="header-cta">Vaata andmeid</a>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="hero-glow hero-glow--1"></div>
+        <div class="hero-glow hero-glow--2"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Sprint 4 — Viimane toodang
+                </div>
+                <h1 class="hero-title">
+                    Tuleviku<br>
+                    lennukid,<br>
+                    <span class="title-accent">volditud täna.</span>
+                </h1>
+                <p class="tagline">Kogemused, täpsus ja agiilne innovatsioon igas kurvis.</p>
+                <div class="hero-actions">
+                    <a href="#specs" class="btn btn--primary">
+                        <span>Vaata lähemalt</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="#about" class="btn btn--ghost">Meie protsess</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="plane-orbit"></div>
+                <svg class="plane-svg" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Main body -->
+                    <path d="M60 210 L440 95 L255 270 Z" fill="url(#planeBody)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                    <!-- Underbelly -->
+                    <path d="M60 210 L255 270 L215 325 Z" fill="url(#planeUnder)"/>
+                    <!-- Top crease highlight -->
+                    <path d="M60 210 L440 95 L255 185 Z" fill="rgba(255,255,255,0.06)"/>
+                    <!-- Fold line -->
+                    <line x1="60" y1="210" x2="255" y2="185" stroke="rgba(0,212,255,0.5)" stroke-width="1.5" stroke-dasharray="8 5"/>
+                    <!-- Nose shine -->
+                    <ellipse cx="420" cy="103" rx="14" ry="8" fill="rgba(255,255,255,0.25)" transform="rotate(-25 420 103)"/>
+                    <!-- Trail dots -->
+                    <circle cx="42" cy="218" r="2.5" fill="#00d4ff" opacity="0.7"/>
+                    <circle cx="22" cy="226" r="1.8" fill="#00d4ff" opacity="0.45"/>
+                    <circle cx="6" cy="233" r="1.2" fill="#00d4ff" opacity="0.2"/>
+                    <defs>
+                        <linearGradient id="planeBody" x1="60" y1="210" x2="440" y2="95" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#c8dff5"/>
+                            <stop offset="1" stop-color="#edf5ff"/>
+                        </linearGradient>
+                        <linearGradient id="planeUnder" x1="60" y1="270" x2="255" y2="325" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#5a8fb8"/>
+                            <stop offset="1" stop-color="#2d5f8a"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <div class="plane-shadow"></div>
+            </div>
+        </div>
+        <!-- Metrics row inside hero -->
+        <div class="container">
+            <div class="hero-metrics">
+                <div class="metric">
+                    <span class="metric-val">210<small>mm</small></span>
+                    <span class="metric-key">Tiivaulatus</span>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric">
+                    <span class="metric-val">18<small>m</small></span>
+                    <span class="metric-key">Max viskekaugus</span>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric">
+                    <span class="metric-val">80<small>g/m²</small></span>
+                    <span class="metric-key">Paberikaal</span>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric">
+                    <span class="metric-val">4<small>sprint</small></span>
+                    <span class="metric-key">Iteratsioone</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="specs" class="specs">
+        <div class="specs-bg-label">SPECS</div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// 01 TEHNILISED ANDMED</span>
+                <h2 class="section-title">Tehniline kirjeldus</h2>
+                <p class="section-sub">Kõik näitajad mõõdetud reaalsetes tingimustes Sprint 4 lõpptoodangul.</p>
+            </div>
+            <div class="specs-grid">
+                <div class="spec-card" data-reveal>
+                    <div class="spec-card__icon">📐</div>
+                    <div class="spec-card__label">Tiivaulatus</div>
+                    <div class="spec-card__value">210<span>mm</span></div>
+                    <p class="spec-card__note">Optimeeritud tõstejõu ja suunamisstabilisuse tasakaal</p>
+                </div>
+                <div class="spec-card" data-reveal>
+                    <div class="spec-card__icon">📄</div>
+                    <div class="spec-card__label">Paberikulu</div>
+                    <div class="spec-card__value">80<span>g/m² A4</span></div>
+                    <p class="spec-card__note">Standard kontoripaberist maksimaalne aerodünaamiline tulemus</p>
+                </div>
+                <div class="spec-card" data-reveal>
+                    <div class="spec-card__icon">🎯</div>
+                    <div class="spec-card__label">Max viskekaugus</div>
+                    <div class="spec-card__value">15–18<span>m</span></div>
+                    <p class="spec-card__note">Sisetingimustes 1.8m kõrguselt, 30° optimaalse viskenurkga</p>
+                </div>
+                <div class="spec-card" data-reveal>
+                    <div class="spec-card__icon">🌊</div>
+                    <div class="spec-card__label">Lennu iseloom</div>
+                    <div class="spec-card__value" style="font-size:1.6rem">Stabiilne</div>
+                    <p class="spec-card__note">Ühtlane libisemine ilma kaldumiseta — glaseerimine tipptasemel</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// 02 MEIE LUGU</span>
+                <h2 class="section-title">Meie tehasest</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text" data-reveal>
+                    <p>Alustasime oma teekonda klassikalise <strong>Taylorismi</strong> meetodil, kus iga liigutus oli rangelt paigas. Kuid lennukitehase eksperimendi käigus mõistsime, et tõeline kvaliteet sünnib läbi <strong>agiilse tootearenduse</strong>.</p>
+                    <p>Meie protsessis mängis võtmerolli <strong>"Raudne kolmnurk"</strong>: tasakaalustasime aega, skoopi ja kulusid, et saavutada maksimaalne lennukaugus ja töökindlus.</p>
+                    <p>Tänu iteratsioonidele ja meeskonnatööle suutsime konveiermeetodilt üle minna kiirele ja paindlikule tootmisele.</p>
+                    <!-- Iron Triangle visual -->
+                    <div class="iron-triangle">
+                        <div class="triangle-label triangle-label--top">Kvaliteet</div>
+                        <svg viewBox="0 0 260 220" fill="none">
+                            <path d="M130 18 L242 195 L18 195 Z" stroke="url(#triG)" stroke-width="2" fill="rgba(0,212,255,0.04)"/>
+                            <circle cx="130" cy="18" r="5" fill="#00d4ff"/>
+                            <circle cx="242" cy="195" r="5" fill="#7c3aed"/>
+                            <circle cx="18" cy="195" r="5" fill="#06b6d4"/>
+                            <text x="130" y="120" text-anchor="middle" font-family="DM Mono" font-size="10" fill="rgba(255,255,255,0.3)">vali kaks</text>
+                            <defs>
+                                <linearGradient id="triG" x1="18" y1="195" x2="242" y2="18" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#06b6d4"/>
+                                    <stop offset="0.5" stop-color="#00d4ff"/>
+                                    <stop offset="1" stop-color="#7c3aed"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div class="triangle-bottom">
+                            <span>Kiirus</span>
+                            <span>Kulud</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-right" data-reveal>
+                    <div class="stat-box">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Agiilsus</span>
+                        <p class="stat-note">Taylorismist kaasaegse sprinditootmiseni</p>
+                    </div>
+                    <div class="stat-box stat-box--alt">
+                        <span class="stat-number">0%</span>
+                        <span class="stat-label">Praaktooted</span>
+                        <p class="stat-note">Sprint 4 toodang — kõik lennukid õhus</p>
+                    </div>
+                    <div class="process-list">
+                        <div class="process-item">
+                            <span class="process-num">01</span>
+                            <div>
+                                <strong>Taylori konveier</strong>
+                                <p>Kiire tootmine, ebaühtlane kvaliteet</p>
+                            </div>
+                        </div>
+                        <div class="process-item">
+                            <span class="process-num">02</span>
+                            <div>
+                                <strong>Retrospektiiv & analüüs</strong>
+                                <p>Vigade kaardistamine, parendusotsused</p>
+                            </div>
+                        </div>
+                        <div class="process-item">
+                            <span class="process-num">03</span>
+                            <div>
+                                <strong>Agiilne sprint</strong>
+                                <p>Ristfunktsioon, pidev tagasiside</p>
+                            </div>
+                        </div>
+                        <div class="process-item">
+                            <span class="process-num">04</span>
+                            <div>
+                                <strong>Toodang valmis ✓</strong>
+                                <p>Parim lennukaugus kogu eksperimendi jooksul</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <div class="logo footer-logo">Aero<span>Fold</span></div>
+                <p>Voldime unelmad reaalsuseks —<br>üks sprint korraga.</p>
+            </div>
+            <div class="footer-meta">
+                <p>&copy; 2026 <strong>Aerofold Factory</strong>. Kõik õigused kaitstud.</p>
+                <p><strong>Ruhm:</strong> Nikita Nikiforov, TARpv24</p>
+                <p><strong>Projekt:</strong> VR 5.1 – Lennukitehase Koduleht (AT 5.0)</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    // Subtle particle canvas background
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+    let W, H, particles = [];
+
+    function resize() {
+        W = canvas.width = window.innerWidth;
+        H = canvas.height = window.innerHeight;
+    }
+
+    function initParticles() {
+        particles = Array.from({length: 55}, () => ({
+            x: Math.random() * W, y: Math.random() * H,
+            vx: (Math.random() - .5) * .25, vy: (Math.random() - .5) * .25,
+            r: Math.random() * 1.5 + .3,
+            a: Math.random() * .35 + .05
+        }));
+    }
+
+    function drawFrame() {
+        ctx.clearRect(0, 0, W, H);
+        particles.forEach(p => {
+            p.x += p.vx; p.y += p.vy;
+            if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
+            if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(0,212,255,${p.a})`;
+            ctx.fill();
+        });
+        // Draw faint connecting lines
+        particles.forEach((a, i) => {
+            particles.slice(i+1).forEach(b => {
+                const d = Math.hypot(a.x-b.x, a.y-b.y);
+                if (d < 130) {
+                    ctx.beginPath();
+                    ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
+                    ctx.strokeStyle = `rgba(0,212,255,${.07 * (1 - d/130)})`;
+                    ctx.lineWidth = .5;
+                    ctx.stroke();
+                }
+            });
+        });
+        requestAnimationFrame(drawFrame);
+    }
+
+    resize(); initParticles(); drawFrame();
+    window.addEventListener('resize', () => { resize(); initParticles(); });
+
+    // Reveal on scroll
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('revealed');
+                observer.unobserve(e.target);
+            }
+        });
+    }, {threshold: 0.15});
+    document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+
+    // Sticky header style
+    window.addEventListener('scroll', () => {
+        document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60);
+    });
+    </script>
+</body>
+</html>
