@@ -392,3 +392,35 @@ footer {
     .footer-meta { text-align: center; }
     .hero-title { font-size: 3rem; }
 }
+
+/* ─── THEME OVERRIDES ─── */
+:root.light-mode {
+    --bg:       #f0f4f8;
+    --bg2:      #e2e8f0;
+    --surface:  #ffffff;
+    --card:     #ffffff;
+    --border:   rgba(15, 23, 42, 0.1);
+    --text:     #0f172a;
+    --muted:    #475569;
+}
+
+/* Стили для новых кнопок управления */
+.controls { display: flex; gap: 10px; align-items: center; }
+.control-btn {
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 6px 10px;
+    cursor: pointer;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.control-btn:hover { border-color: var(--accent); color: var(--accent); }
+.theme-icon { width: 14px; height: 14px; }
+
+/* Фикс для canvas в светлой теме */
+:root.light-mode #bg-canvas { opacity: 0.25; }
